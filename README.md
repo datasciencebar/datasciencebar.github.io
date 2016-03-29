@@ -1,3 +1,11 @@
+# TODO
+
+1. Decide on the template if this one doesn't work
+2. Edit all basic info on the blog - about, titles, images, etc.
+3. Get Disqus comments widget
+4. Get Google Analytics widget
+5. Create our first blog post :)
+
 # How to setup Jekyll if you want to test it locally
 
 1. Install [Jekyll prerequisites](https://jekyllrb.com/docs/installation/):
