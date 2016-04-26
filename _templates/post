@@ -1,0 +1,11 @@
+---
+layout: {{ layout }}
+title: {{ title }}
+author: {{ author }}
+modified:
+categories: {{ dir }}
+excerpt:
+tags: []
+image:
+  feature:
+---

@@ -1,0 +1,27 @@
+# Authors
+
+kbauman:
+  name: Konstantin Bauman
+  web: http://people.stern.nyu.edu/kbauman/
+  email: kbauman@stern.nyu.edu
+  bio: "Research Scientist in the IOMS Department Stern School of Business, NYU"
+  longbio: 'Konstantin Bauman is a Research Scientist in the Department of Information, Operations and Management Sciences at the <a href="http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept">Leonard N. Stern School of Business, NYU</a>. His current research interests include machine learning, recommender systems, technology enhanced learning, and natural language processing. Konstantin received his M.S. in Mathematics from <a href="http://www.msu.ru/en/">Moscow State Lomonosov University</a> in 2008, his M.S. in Data Mining from <a href="">Moscow Institute of Physics and Technology</a> in 2009, and his Ph.D. in Geometry and Topology from <a href="http://www.mi.ras.ru/index.php?c=&l=1">Mathematical Institute of the Russian Academy of Science</a> in 2012. Before joining NYU, Konstantin worked for five years at the research division of <a href="https://yandex.com/company/">Yandex</a>, working on data mining and machine learning problems.'
+  avatar: kbauman.jpg
+  twitter: kbauman_
+  google:
+    plus: 
+    scholar: zPPIWkgAAAAJ
+  github: kobauman
+
+denxx:
+  name: Denis Savenkov
+  web: http://www.mathcs.emory.edu/~dsavenk/
+  email: denis.savenkov@emory.edu
+  bio: "I ordered what?"
+  longbio: "Denis Savenkov is a Ph.D. student in the Intelligent Information Access Lab of Emory University, working with Prof. Eugene Agichtein. He got his bachelor and masters degree from Tula State University, Russia. After graduation he moved to Moscow and finished Yandex school of Data analysis. Denis worked in Yandex for three years focusing on the query-biased document summarization problem (machine learning, quality measures). Currently his research interests lie in the field of machine reading, knowledge extraction and representation."
+  avatar: denxx.jpg
+  twitter: DenXX
+  google:
+    plus:
+    scholar: shJFscsAAAAJ
+  github: denxx
