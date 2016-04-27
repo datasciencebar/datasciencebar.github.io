@@ -18,7 +18,7 @@ denxx:
   web: http://www.mathcs.emory.edu/~dsavenk/
   email: denis.savenkov@emory.edu
   bio: "I ordered what?"
-  longbio: "Denis Savenkov is a Ph.D. student in the Intelligent Information Access Lab of Emory University, working with Prof. Eugene Agichtein. He got his bachelor and masters degree from Tula State University, Russia. After graduation he moved to Moscow and finished Yandex school of Data analysis. Denis worked in Yandex for three years focusing on the query-biased document summarization problem (machine learning, quality measures). Currently his research interests lie in the field of machine reading, knowledge extraction and representation."
+  longbio: 'Denis Savenkov is a Ph.D. student in the <a href="http://ir.mathcs.emory.edu/">Intelligent Information Access Lab of Emory University</a>, working with Prof. Eugene Agichtein. He got his bachelor and masters degree from Tula State University, Russia. After graduation he moved to Moscow and finished Yandex school of Data analysis. Denis worked in Yandex for three years focusing on the query-biased document summarization problem (machine learning, quality measures). Currently his research interests lie in the field of information retrieval and question answering.'
   avatar: denxx.jpg
   twitter: DenXX
   google:

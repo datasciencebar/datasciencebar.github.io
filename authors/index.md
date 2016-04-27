@@ -9,13 +9,14 @@ search_omit: true
 {% for author in site.data.authors %}
 <h1 id="{{ author[0] }}">{{ author[1].name }}</h1>
 
-<footer class="entry-meta">
-	{% if author[1].avatar contains 'http' %}
+<footer class="entry-meta" style="width:150px">
+    {% if author[1].avatar contains 'http' %}
     	<img src="{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
     {% elsif author[1].avatar %}
-        <img src="{{ site.url }}/images/{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+        <img src="{{ site.url }}/images/{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px" ></a>
     {% endif %}
     <span class="author vcard"><span class="fn">
+	{% if author[1].web %}<a href="{{ author[1].web }}" class="author-social" target="_blank"><i class="fa fa-fw fa-internet-explorer"></i> Web</a><br />{% endif %}	
 	{% if author[1].email %}<a href="mailto:{{ author[1].email }}" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>{% endif %}
 	{% if author[1].twitter %}<br><a href="http://twitter.com/{{ author[1].twitter }}" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
     {% if author[1].facebook %}<br><a href="http://facebook.com/{{ author[1].facebook }}" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>{% endif %}
@@ -36,3 +37,4 @@ search_omit: true
 </footer>
 {{ author[1].longbio }}
 {% endfor %}
+
