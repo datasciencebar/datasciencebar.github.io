@@ -5,8 +5,9 @@ locale: en_US
 description: "Data Science: Best Approaches Review."
 logo: #site-logo.png
 search: true
-#url: http://localhost:4000
-url: http://datasciencebar.github.io
+comments: true
+url: http://localhost:4000
+#url: http://datasciencebar.github.io
 
 # Jekyll configuration
 
@@ -49,13 +50,13 @@ titlecase: true
 
 # Site owner
 owner:
-  name: Data Science BAR
+  name: Data Science bar
   avatar: bio-photo.jpg
   email: datasciencebar@gmail.com
-  disqus-shortname:
+  disqus-shortname: datasciencebar
   twitter: #username
   facebook: #username
-  github: #username
+  github: datasciencebar
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username

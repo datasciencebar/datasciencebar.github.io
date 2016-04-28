@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "MathJax Example"
+author: denxx
 modified:
 categories: blog
 excerpt:
