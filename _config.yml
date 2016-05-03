@@ -1,9 +1,9 @@
 # Site wide configuration
 
-title: Data Science BAR
+title: Data Science bar
 locale: en_US
-description: "Data Science: Best Approaches Review."
-logo: #site-logo.png
+description: "“To <del>alcohol</del> data! The cause of, and solution to, all of life’s problems.” © Homer J. Simpson"
+logo: data-science-barcode.png
 search: true
 comments: true
 #url: http://localhost:4000

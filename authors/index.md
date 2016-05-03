@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Authors
+title: Your bartenders
 excerpt: "Authors of the blog."
 search_omit: true
 ---

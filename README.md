@@ -12,3 +12,9 @@
 # Data Science BAR
 
 **Data Science BAR** is a blor for reviewing best approaches to Data Mining competitions.
+
+# Some interesting phrases, ideas, etc
+
+1. Different meanings of the word bar (setting the bar high)
+2. Phrases related to bars: happy hour, bartender, barcode 
+3. [Nice barcode + bar logo, but sold](https://stocklogos.com/logo/bar-code)
