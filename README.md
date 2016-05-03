@@ -5,8 +5,10 @@
 2. [done] Edit all basic info on the blog - about, titles, images, etc.
 3. [done] Get Disqus comments widget
 4. [done] Get Google Analytics widget
-5. Create our first blog post :)
-
+5. Create our first blog post
+  5.1. Describe Allen AI Science Challenge [denxx]
+  5.2. Describe Home Depot Product Relevance Challenge [denxx]
+  5.3. What is next?
 
 
 # Data Science BAR
