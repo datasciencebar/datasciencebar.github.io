@@ -6,8 +6,8 @@ description: "“To <del>alcohol</del> data! The cause of, and solution to, all 
 logo: data-science-barcode.resized.png
 search: true
 comments: true
-url: http://localhost:4000
-#url: http://datasciencebar.github.io
+#url: http://localhost:4000
+url: http://datasciencebar.github.io
 
 # Jekyll configuration
 
