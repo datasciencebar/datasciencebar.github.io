@@ -1,22 +1,11 @@
-# TODO
+# Data Science bar
 
-0. [done] Convert this account into organization? In this case we don't need to re-login to create new repositories and do other changes.
-1. [done] Decide on the template if this one doesn't work
-2. [done] Edit all basic info on the blog - about, titles, images, etc.
-3. [done] Get Disqus comments widget
-4. [done] Get Google Analytics widget
-5. Create our first blog post
-  5.1. Describe Allen AI Science Challenge [denxx]
-  5.2. Describe Home Depot Product Relevance Challenge [denxx]
-  5.3. What is next?
+**Data Science bar** is a blor for reviewing best approaches to Data Mining competitions.
 
-
-# Data Science BAR
-
-**Data Science BAR** is a blor for reviewing best approaches to Data Mining competitions.
+---
 
 # Some interesting phrases, ideas, etc
 
-1. Different meanings of the word bar (setting the bar high)
-2. Phrases related to bars: happy hour, bartender, barcode 
+1. Different meanings of the word bar: drinking bar, pole (setting the bar high), barcode
+2. Phrases related to bars: happy hour, bartender, shot
 3. [Nice barcode + bar logo, but sold](https://stocklogos.com/logo/bar-code)
