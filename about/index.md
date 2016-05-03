@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data Science BAR
+title: About this blog
 excerpt: "Data Science: Best Approaches Review."
 modified: 2016-04-26T23:44:38.564948-04:00
 image:
@@ -9,13 +9,7 @@ image:
   creditlink: https://www.flickr.com/photos/seandavis/
 ---
 
-Looking for a place containing useful information about interesting approaches to data science problems? Here it is!
+Data Science bar is a place where you can get a shot of useful information on data science, data analytics and machine learning. We are planning to review interesting data science competitions, such as Kaggle, explore different exciting datasets and problems. We intend this blog to be a dive into approaches and techniques that work best for different types of problems. If you have an interesting problem to solve, feel free to <a href="mailto:{{ site.owner.email }}"> contact us</a>.
 
-Data Science BAR is defined as "Data Science: Best Approaches Review." In this blog we are discussing best approaches to Data Science Competitions.
 
-## Data Science BAR is all about:
-
-* Data Mining Competitions.
-* Reviewing different approaches to data mining problems.
-
-<center> <a markdown="0" href="{{ site.url }}/blog" class="btn">Open Blog</a> </center>
+<center> <a markdown="0" href="{{ site.url }}/blog" class="btn">Give me a "drink"</a> </center>
