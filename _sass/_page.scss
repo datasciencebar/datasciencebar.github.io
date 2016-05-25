@@ -138,6 +138,30 @@ span + .entry-title {
 	}
 }
 
+.bio-photo-small {
+	display: none;
+	@include media($large) {
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 10px;
+		@include rounded(100px);
+		@include clearfix;
+	}
+}
+
+.bio-photo-tiny {
+	display: none;
+	@include media($large) {
+		display: block;
+		width: 70px;
+		height: 70px;
+		margin-bottom: 10px;
+		@include rounded(70px);
+		@include clearfix;
+	}
+}
+
 
 /* feature image credit */
 

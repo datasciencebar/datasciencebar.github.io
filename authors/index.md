@@ -11,7 +11,7 @@ search_omit: true
 
 <footer class="entry-meta" style="width:150px">
     {% if author[1].avatar contains 'http' %}
-    	<img src="{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+    	<img src="{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px"></a>
     {% elsif author[1].avatar %}
         <img src="{{ site.url }}/images/{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px" ></a>
     {% endif %}
