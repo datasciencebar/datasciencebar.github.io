@@ -12,18 +12,19 @@ icon: "homedepot.png"
 date: 2016-08-01
 ---
 
-The Home Depot Product Search Relevance Kaggle competition offered participants a chance to build a model, which predicts relevance of products that are returned in a response to the user query. This is a typical e-commerce search scenario, where the products returned in response to user's query are structured objects, represented by a collection of properties (e.g. brand, size, type, etc.), which brings certain specifics compared to classical document search. A common approach to e-commerce search is to use an out-of-the-box search engine (e.g. [Apache Solr](http://lucene.apache.org/solr/){:target="_blank"} or [Elastic Search](https://www.elastic.co/){:target="_blank"}) to retrieve a set of candidate products using keywords mentioned in different properties, and then apply a post-processing machine learning model to rerank the products. The goal of the Home Depot competition was exactly to build such a post-processing model to predict relevance of products to given queries.
+One of the most improtant features of e-commerce platforms is product search, which displays a list of products in a response to a user search query. The products are typically represented as a collection of properties (e.g. brand, type, size, color, etc.). A typical approach to e-commerce search is to use an out-of-the-box search engine (e.g. [Apache Solr](http://lucene.apache.org/solr/){:target="_blank"} or [Elastic Search](https://www.elastic.co/){:target="_blank"}) to retrieve a set of candidate products by matching user queries against properties text, and then apply a post-processing model to rerank the products. The Home Depot Product Search Relevance Kaggle competition challenged participants to build such a model, which can predict the relevance of products returned in a response to a user query. 
+
 
 ## Data
 
-For the challenge [Home Depot provided a dataset](https://www.kaggle.com/c/home-depot-product-search-relevance/data){:target="_blank"}, that contains pairs of user search queries and products, that might be relevant to these queries. Each such pair was examined by at least three human raters, who assigned integer scores from 1 (not relevant) to 3 (highly relevant). The scores from different raters were averaged. Organizers made available [instructions](https://www.kaggle.com/c/home-depot-product-search-relevance/download/relevance_instructions.docx){:target="_blank"} for human raters who judged the relevance of products to the queries.
+For the challenge [Home Depot provided a dataset](https://www.kaggle.com/c/home-depot-product-search-relevance/data){:target="_blank"}, that contains pairs of user search queries and products, that might be relevant to these queries. Each such pair was examined by at least three human raters, who assigned integer scores from 1 (not relevant) to 3 (highly relevant). The scores from different raters were averaged. Organizers made available [instructions](https://www.kaggle.com/c/home-depot-product-search-relevance/download/relevance_instructions.docx){:target="_blank"} for human raters who judged the relevance of products to the queries, so participants can learn about the exact process used to obtain the ground truth labels.
 
 While the user queries are simply strings, that contain one or more terms, products are more complex. Each product has a product id, title (e.g. "Delta Vero 1-Handle Shower Only Faucet Trim Kit in Chrome (Valve Not Included)"), a more verbose description (e.g. "Update your bathroom with the Delta Vero Single-Handle Shower Faucet Trim Kit in Chrome ...") and one or more attributes, which could be brand name, weight, color, etc. While some attributes have a clear name (e.g. "MFG Brand Name"), others are simply bullet points, that you might expect to see under the product description on a website (e.g. "Bullet01" -> "Versatile connector for various 90° connections and home repair projects").
 
 
 ## Evaluation
 
-The goal of the challenge is to predict the relevance score for (product, search query) pairs from the test set. The main quality metric for the submissions was root mean squared error (RMSE): $$\textrm{RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (rel_i - \hat{rel}_i)^2}$$, where $$rel_i$$ is the average human relevance score, and $$\hat{rel}_i$$ is the model prediction.
+The goal of the challenge is to build a model to predict relevance scores for (product, search query) pairs from the test set. The quality of the model was evaluated using root mean squared error (RMSE): $$\textrm{RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (rel_i - \hat{rel}_i)^2}$$, where $$rel_i$$ is the average human relevance score, and $$\hat{rel}_i$$ is the model prediction.
 
 
 ## Data Exploration
@@ -69,7 +70,7 @@ plt.show()
 
 ![Venn diagram of queries in train and test sets]({{ site.url }}/images/home_depot/queries_venn.png)
 
-The percentages of queries and products that appear in train only and in test only are quite important. It's natural to expect that predictions for new products and queries might be harder to make, than for queries and products which the model has seen during training. Therefore, a good training-validation splits (or cross-validation splits) would maintain the ratio of repeated and new queries and products. Otherwise, the parameters tuned on the validation set can be far from optimal, and we will get a lower leaderboard score.
+These percentages are actually quite important. It's natural to expect that predictions for new products and queries might be harder to make, than for queries and products which the model has seen during training. Therefore, a good training-validation splits (or cross-validation splits) would maintain the ratio of repeated and new queries and products. Otherwise, the parameters tuned on the validation set can be far from optimal, and we will get a lower leaderboard score.
 
 {% highlight python %}
 # Split products into buckets based on their product_uid
@@ -122,7 +123,7 @@ def fix_units(s, replacements = {"'|in|inches|inch": "in",
     return s
 {% endhighlight %}
 
-* As we all know, words have different forms: singular and plural, verb forms and tenses, etc. All these variations can cause us troubles with word comparisons. A common strategy to deal with these situations is to [stem](https://en.wikipedia.org/wiki/Stemming){:target="_blank"} words, i.e. reduce word forms to their roots. There are multiple algorithms to do it, implemented in different languages. In Python one can use the [nltk](http://www.nltk.org/){:target="_blank"} library:
+* As we all know, words have different forms: singular and plural, verb forms and tenses, etc. All these variations can cause us troubles with word comparisons. A common strategy to deal with these situations is to [stem](https://en.wikipedia.org/wiki/Stemming){:target="_blank"} words, i.e. reduce word forms to their roots. We can replace the original product descriptions and queries with stemmed versions, which should make any word comparisons more robust. There are multiple algorithms to do it, implemented in different languages. In Python one can use the [nltk](http://www.nltk.org/){:target="_blank"} library:
 {% highlight python %}
 from nltk.stem.porter import *
 from nltk.tokenize import word_tokenize
