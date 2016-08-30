@@ -11,9 +11,9 @@ search_omit: true
 
 <footer class="entry-meta" style="width:150px">
     {% if author[1].avatar contains 'http' %}
-    	<img src="{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px"></a>
+    	<img src="{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px" />
     {% elsif author[1].avatar %}
-        <img src="{{ site.url }}/images/{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px" ></a>
+        <img src="{{ site.url }}/images/{{ author[1].avatar }}" class="bio-photo" alt="{{ author.name }} bio photo" width="150px" />
     {% endif %}
     <span class="author vcard"><span class="fn">
 	{% if author[1].web %}<a href="{{ author[1].web }}" class="author-social" target="_blank"><i class="fa fa-fw fa-internet-explorer"></i> Web</a><br />{% endif %}	
